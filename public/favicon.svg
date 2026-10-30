@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="aquaGrad" x1="64" y1="64" x2="448" y2="448" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#14B8A6"/>
+      <stop offset="50%" stop-color="#0D9488"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="256" y1="120" x2="256" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#5EEAD4" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#3B82F6" stop-opacity="0.3"/>
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <!-- Outer Rounded Container -->
+  <rect width="512" height="512" rx="112" fill="#0F172A"/>
+  
+  <!-- Ambient backdrop circuit paths -->
+  <path d="M96 256 H176 L216 296 V380" stroke="#1E293B" stroke-width="6" stroke-linecap="round"/>
+  <path d="M416 256 H336 L296 216 V132" stroke="#1E293B" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="96" cy="256" r="8" fill="#14B8A6"/>
+  <circle cx="416" cy="256" r="8" fill="#3B82F6"/>
+  <circle cx="216" cy="380" r="8" fill="#0D9488"/>
+  <circle cx="296" cy="132" r="8" fill="#60A5FA"/>
+
+  <!-- Sovereign Droplet Shield Body -->
+  <path d="M256 80 C256 80 144 216 144 312 C144 373.856 194.144 424 256 424 C317.856 424 368 373.856 368 312 C368 216 256 80 256 80 Z" 
+        fill="url(#aquaGrad)" 
+        filter="url(#softGlow)"/>
+
+  <!-- Neural Route Channels inside the droplet -->
+  <path d="M256 150 V260 M256 260 L200 320 M256 260 L312 320" 
+        stroke="#FFFFFF" 
+        stroke-width="12" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"/>
+
+  <!-- Waypoint Nodes -->
+  <circle cx="256" cy="150" r="14" fill="#FFFFFF"/>
+  <circle cx="256" cy="260" r="12" fill="#FFFFFF"/>
+  <circle cx="200" cy="320" r="14" fill="#A7F3D0"/>
+  <circle cx="312" cy="320" r="14" fill="#93C5FD"/>
+
+  <!-- Inner core energy pulse -->
+  <circle cx="256" cy="260" r="6" fill="#0D9488"/>
+  <circle cx="200" cy="320" r="7" fill="#059669"/>
+  <circle cx="312" cy="320" r="7" fill="#1D4ED8"/>
+
+  <!-- Local / Cloud Route Sub-branches -->
+  <path d="M200 320 L176 350" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round"/>
+  <path d="M312 320 L336 350" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="176" cy="350" r="6" fill="#34D399"/>
+  <circle cx="336" cy="350" r="6" fill="#60A5FA"/>
+</svg>

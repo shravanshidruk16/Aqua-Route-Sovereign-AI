@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  gateway:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: aquaroute_gateway
+    ports:
+      - "8000:8000"
+    environment:
+      - ENVIRONMENT=production
+      - OLLAMA_HOST=http://host.docker.internal:11434
+    restart: unless-stopped
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
